@@ -11,7 +11,7 @@ En [TEORIA](https://github.com/eugenia1984/masterCompletoEnJava/blob/main/TEORIA
 
 ###  Práctica
 
-Dentro de HELLO WORLD esta la práctica
+Dentro de **src** esta la práctica
 
 1. Introducción
 
