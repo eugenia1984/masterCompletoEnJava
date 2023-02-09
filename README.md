@@ -13,26 +13,28 @@ En [TEORIA](https://github.com/eugenia1984/masterCompletoEnJava/blob/main/TEORIA
 
 Dentro de **src** esta la práctica
 
-1. Introducción
+- 1 - Introducción
 
-2. Variables
+- 2 - Variables
 
-3. String
+- 3 - String
 
-4. Operadores
+- 4 - Operadores
 
-5. Flujo de control
+- 5 - Flujo de control
 
-6. Clase wrapper
+- 6 - Clase wrapper
 
-8. Clases Date y Calendar
+- 8 - Clases Date y Calendar
 
-9. Clase System
+- 9 - Clase System
 
-10.  Clase Math
+- 10 -  Clase Math
 
-11. Línea de comandos
+- 11 - Línea de comandos
 
-12. Arreglos
+- 12 - Arreglos
+
+- 13 - Matrices
 
 ---
