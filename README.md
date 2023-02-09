@@ -4,7 +4,14 @@
 
 ## Secciones
 
+### Teoría
+
+
+En [TEORIA](https://github.com/eugenia1984/masterCompletoEnJava/blob/main/TEORIA.md) está toda la teoría vista.
+
 ###  Práctica
+
+Dentro de HELLO WORLD esta la práctica
 
 1. Introducción
 
