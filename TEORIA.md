@@ -855,4 +855,48 @@ for(int i = 0; i <nombres.length; i++) { // fila
 
 # :star: SECCION 14 - POO : CLASES Y OBJETOS
 
+
+- Los **objetos** como concepto, fuera de la informática, existen desde siempre, antes de la programación!
+
+- El paradigma de la POO es tomar un objeto de la vida real y llevarlo a la programación.
+
+Los **OBJETOS** son **entidades** que combinan...
+
+... el **estado**(las **properties**, los atributos, las características)
+
+... el **comportamiento** (los métodos, c{omo se relacionan unos con otros).
+
+-> Una **clase** es un **molde**. Primero definimos un diseño (MOLDE) de cómo va a ser la entidad que queremos crear! De la **clase prototipo** se crean **instancias**, los objetos.
+
+```Java
+public class Automovil { // Declaracion de la clase -class es la palabra clave
+    // Properties(atributos) es el estado
+    String modelo;
+    String color;
+    double cilindrada;
+    
+    // Metodos
+   public void acelerar() {}
+   public void frenar() {}
+    
+}
+```
+
+- La clase se declara como UpperCamelCase-
+
+- También se puede representar en un UML:
+
+
+```
+----------------------
+      Automovil
+----------------------
+-modelo: String
+-color: String
+-cilindrada: double
+----------------------
++acelerar(); void
++frenar(): void
+```
+
 ---
