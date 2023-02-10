@@ -740,4 +740,119 @@ for(String nombre: nombres) {
 
 # :star: SECCION 13 - MATRICES
 
+## ¿Qué son las matrices?
+
+- Son arreglos bidimensionales, donde cada uno de sus elementos es a su vez un arreglo en su segunda dimensión.
+
+- Esto permite que no todos los elementos tengan el mismo tamalo.
+
+- De esta forma es posible crer matrices recursivas y multi-dimensionales.
+
+- Comienzan en el índice 0, tanto para la fila como para la columna
+
+-> Para **declararla**:
+```
+int[fila][columna] matriz;
+```
+
+Cuando se crea una matriz, se utiliza el operador new, más el tipo de los elementos, más el número de filas y columnas. Ejemplo:
+
+```Java
+int[][] numeros = new int[2][3];
+```
+
+Se suelen denominar el **plural**
+
+- Como en los arrays, se puede obtener el tamaño de la matri con el atributo **length**, tanto para filas y columnas:
+
+```Java
+int[][] numeros = new int[2][3];
+System.out.println("número de filas: " + numeros.length);
+System.out.println("número de columna: " + numeros[0].length);
+```
+
+- Además de **tipos primitivos** puede almacenar del tipo de referencia, objetos. Ejemplo:
+
+```Java
+Producto[][] productos = new Producto[2]][3];
+String[][] nombres = new String[3]][5];
+```
+
+### Inicialiación de elementos
+- Asignamos elementos a la matriz indicando la llave o índice de la fila y de la columna
+```Java
+int [][] numeros = new int[2][4];
+numeros[0][0] = 1; 
+numeros[0][1] = 2; 
+numeros[0][2] = 3; 
+numeros[0][3] = 4; 
+numeros[1][0] = 5; 
+numeros[1][1] = 6; 
+numeros[1][2] = 7; 
+numeros[1][3] = 8; 
+```
+
+```
+1 2 3 4
+5 6 7 8 
+```
+
+Ejemplo para matriz de objetos de tipo Producto:
+```Java
+Producto[][] productos = new Producto[2][2];
+
+productos[0][0] = new Producto["Mesa comedor"];
+productos[0][1] = new Producto["TV Sony LED 55"];
+productos[1][0] = new Producto["Bicicleta Oxford"];
+productos[1][1] = new Producto["Bicicleta Estática Gimnasio"];
+```
+
+
+```
+Mesa comedor        TV Sony LED 55
+Bicicleta Oxford  Bicicleta Estática Gimnasio
+```
+
+### Obtener elementos
+
+- Accedemos a los elementos de la matriz mediante índice o llaves(keys) de la fila y columna
+
+```Java
+Producto tvSony = productos[0][1];
+```
+
+### Declaración, instanciación e inicialización de una matriz
+
+- Se utiliza cuando conocemos los elementos y el tamaño de la matriz
+
+```Java
+int[][] numeros = { {1,2,3,4} , {5,6,7,8} };
+```
+
+### Recorrer una matriz usando for
+
+```Java
+// declaro
+String[][] nombres = new String[3][2];
+// asigno valores
+nombres[0][0] = "Pepe";
+nombres[0][1] = "María";
+
+nombres[1][0] = "Pato";
+nombres[1][1] = "Bea";
+
+nombres[2][0] = "Lucas";
+nombres[2][1] = "Luci";
+
+// la recorro
+for(int i = 0; i <nombres.length; i++) { // fila
+    for(int j = 0; i <nombres[i].length; j++) { // columna
+        System.out.printls("nombre = " + nombres[i][j]);
+    }
+}
+```
+---
+
+# :star: SECCION 14 - POO : CLASES Y OBJETOS
+
 ---
