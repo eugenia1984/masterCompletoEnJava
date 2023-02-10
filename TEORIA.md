@@ -899,4 +899,12 @@ public class Automovil { // Declaracion de la clase -class es la palabra clave
 +frenar(): void
 ```
 
+## Crear objetos
+
+- El operador **new** reserva memoria dinámica para un objeto. Se asigna una referencia hacia ese objeto.
+
+```Java
+Automovil auto = new Automovil();
+```
+
 ---
