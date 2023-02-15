@@ -1026,5 +1026,15 @@ public class TestMain {
 }
 ```
 
+### Modificadores de acceso
+
+- **PUBLIC** -> Todos tienen acceso
+
+- **DEFAULT** -> Solo acceden los del mismo paquete
+
+- **PROTECTED** -> Acceden las clases del mismo paquete y las clases hijas
+
+- **PRIVATE** -> Solo se accede en la misma clase (no influye el paquete o la herencia)
+
 ---
 
