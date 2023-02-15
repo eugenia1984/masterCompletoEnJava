@@ -1038,3 +1038,11 @@ public class TestMain {
 
 ---
 
+# :star: SECCIÓN 16 - POO - EJEMPLO FACTURA
+
+## UML de las clases
+
+![image](https://user-images.githubusercontent.com/72580574/219105283-e73da55d-a145-4f00-96d3-e51f0a997352.png)
+
+
+---
