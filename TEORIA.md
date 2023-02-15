@@ -1042,7 +1042,30 @@ public class TestMain {
 
 ## UML de las clases
 
-![image](https://user-images.githubusercontent.com/72580574/219105283-e73da55d-a145-4f00-96d3-e51f0a997352.png)
+```
+                        -----------------------
+                           Factura
+---------------         ---------------------
+    Cliente             -cliente: Cliente
+--------------- <----   -items: itemFactura[]
+-nombre: String         -folio: Integer
+-nif: String            -descripcion: String
+----------------        -fecha: Date
+                        ------------------------
+                         +calcularTotal(): Double
+                         +verDatalle(): String
+                         ---------------------
+                               |
+                        ---------------------------
+                            ItemFactura
+                        ---------------------------        -----------------------
+                        -producto: Producto         ----->       Producto
+                        -cantidad: Integer                 -----------------------
+                        ---------------------------         -codigo: Integer
+                        +calcularImporte(): Double          -nombre: String
+                        ---------------------------         -precio: Double
+                                                          -----------------------
+```                      
 
 
 ---
