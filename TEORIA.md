@@ -908,3 +908,123 @@ Automovil auto = new Automovil();
 ```
 
 ---
+
+# :star: SECCION 15 - POO: PAQUETES
+
+## ¿Qué son los paquetes ?
+
+Son como un contenedor que nos permite agrupar y organizar nuestras clases!
+
+## Características:
+
+- Agrupan y organizan nuestras clases.
+
+- Además evitan conflictos de nombre entre clases.
+
+- Según modificadores ocultan el acceso a sus clases y/o a sus miembros.
+
+## Estándar en nombres de paquetes
+
+- Deben estar escrito completamente en minúscula y los subpackage se separan con un punto.
+
+- Típicamente las empresas utilizan la extensión de su dominio (com, org, es, cl, mx) seguido del nombdre dle dominio, ejemplo: com.google, com.fabebook. Si hay más de un proyecto de agrupan:
+```
+com.aguzman.proyectoa
+com.guzman.proyectob
+```
+
+Y dentro de cada proyecto puedo tener sub paquetes
+
+```
+com.aguzman.compras.proyectoa
+com.guzman.ventas.proyectoa
+```
+
+## Definiendo el package en nuestra clase
+
+- Utilizamos la palabra reservada **package** seguido del nombre del paquete:
+
+```Java
+package com.aguzman.datos;
+
+public class Persona {
+}
+```
+
+- Luego para utilizar la clase la debemos importar con **import**
+
+```Java
+import com.aguzman.datos.Persona;
+```
+
+- Utilizando una clase:
+
+```Java
+package com.aguzman.prueba;
+
+public class TestMain {
+    public static void main(String[] args) {
+        com.aguzman.datos.Persona persona = new com.aguzman.datos.Persona();
+    }
+}
+```
+
+- Importando para utilizar una clase:
+
+```Java
+package com.aguzman.prueba;
+
+import com.aguzman.datos.Persona;
+
+public class TestMain {
+    public static void main(String[] args) {
+       Persona persona = new Persona();
+    }
+}
+```
+
+- Importando TODAS las clase:
+
+```Java
+package com.aguzman.prueba;
+
+import com.aguzman.datos*;
+
+public class TestMain {
+    public static void main(String[] args) {
+       Persona persona = new Persona();
+    }
+}
+```
+
+- Evitando conflictos de nombre:
+
+```Java
+package com.aguzman.prueba;
+
+import com.aguzman.datos.Persona;
+
+public class TestMain {
+    public static void main(String[] args) {
+       Persona persona = new Persona();
+       com.aguzman.otro.Persona persona2 = new com.aguzman.otro.Persona();
+    }
+}
+```
+
+- Import estático:
+
+```Java
+package com.aguzman.prueba;
+
+import com.aguzman.datos.Persona.saludar;
+
+public class TestMain {
+    public static void main(String[] args) {
+       String saludo = saludar();
+    }
+}
+```
+
+---
+
