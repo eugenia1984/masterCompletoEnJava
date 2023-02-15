@@ -39,6 +39,8 @@ Dentro de **src** esta la práctica
 
 - 14 - POO: Clases y Objetos
 
-- 15 - POO: Paquetes
+- 15 - POO: Paquetes (ejemplo en src/org)
+
+- 16 - POO: Ejemplo Facturas
 
 ---
