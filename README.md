@@ -41,7 +41,7 @@ Dentro de **src** esta la práctica
 
 - 15 - POO: Paquetes (ejemplo en src/org)
 
-- 16 - POO: Ejemplo Facturas
+- 16 - POO: Ejemplo Facturas (ejemplo en src/ar/mecosta/appfacturas)
 
 - 17 - POO - Sobrecarga de metodos
 
