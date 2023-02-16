@@ -1072,4 +1072,8 @@ public class TestMain {
 
 ## :star: SECCIÓN 17 - POO - SOBRECARGA DE MÉTODOS
 
+## ¿Qué es la sobrecarga?
+
+- La sobrecarga se refiere a la posibilidad de tener dos o más métodos con el mismo nombre pero con funcionalidad diferente
+
 ---
