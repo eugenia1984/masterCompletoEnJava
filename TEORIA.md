@@ -1074,6 +1074,6 @@ public class TestMain {
 
 ## ¿Qué es la sobrecarga?
 
-- La sobrecarga se refiere a la posibilidad de tener dos o más métodos con el mismo nombre pero con funcionalidad diferente
+- La sobrecarga se refiere a la posibilidad de tener dos o más métodos con el mismo nombre pero con funcionalidad diferente. Los argumentos deben ser distintos, puede variar la cantidad o el tipo de dato.
 
 ---
