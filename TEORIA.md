@@ -1077,3 +1077,101 @@ public class TestMain {
 - La sobrecarga se refiere a la posibilidad de tener dos o más métodos con el mismo nombre pero con funcionalidad diferente. Los argumentos deben ser distintos, puede variar la cantidad o el tipo de dato.
 
 ---
+
+# :star: SECCIÓN 18 - POO - HERENCIA
+
+## ¿Qué es la herencia?
+
+Es una relación de parentesco entre dos clases, una es padre de la otra (que es la hija)
+
+## Características
+
+- Es el mecanismo de la POO para implementar relaciones de jerarquía de clases
+
+- Una subclase hereda el estado(propiedades) y el comportamiento(sus métodos) de todos sus ansestros
+
+- Es una de las bases de **reutilización de código** y **polimirfismo**.
+
+- También es un principio fundamental de la POO
+
+## Parentesco entre clases
+
+No puede existir herencia si no existe alguna relación familiar entre ambas!
+
+## Ejemplo de herencia
+
+````Java
+class Persona{}
+classProfesor extends Persona {}
+class Director extends Persona{}
+class Alumno extends Persona{}
+class Alumnointernacional extends Alumno {}
+```
+
+- El término **superclase** se refiere a la clase que es el **ancestro más directo**, así como a todas las clases ascendentes.
+
+- **extends** es la palabra reservada
+
+- Cuando una clae no extiende de manera explícita, lo hace de la **clase Object**, la clase padre de todas las clases en Java
+
+- En UML es una **flecha continua** que va desde la clase hija hasta la clase padre, similar a la relación de asociación, pero con la diferencia que termina con una punta en forma de triángulo.
+
+## Hay dos formas de herencia
+
+Hay dos formas distintas para el proceso de creación de jerarquías de clases o herencia:
+
+- Generalización: teneemos dos clases hijas de Persona: Profesor y Alumno
+
+- Especialización: la clase padre Persona y la clase hija Alumno.
+
+## Constructor y la palabra reservada super
+
+```Java
+public class Persona {
+    private String nombre;
+    private String apellido;
+    
+    public Persona(String nombre, String apellido) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+    }
+}
+
+public class Alumno extends Persona {
+private double promedio;
+
+public Alumno(String nombre, String apellido, double promedio) {
+    super(nombre, apellido);
+    this.promedio = promedio;
+}
+```
+
+## Sobreescritura de métodos
+
+- Se puede sobreescribir un  método que heredamos del padre, se puede hacer redefiniendo en la clase hija un método con el mismo nombre.
+
+-> **polimorfismo**: distintas formas para un mismo comportamiento.
+
+- @Override para indicar que sobreescribimos
+
+```Java
+public class Alumno extends Persona {
+    @Override
+    public void metodoDelPadre {
+        super.metodoDelPadre();
+        // aca sigo con lo particular de Alumno
+    }
+}
+```
+
+## Sobreescritura de toString
+
+- También con @Override
+
+- En el return primero invoco a: **super.toString()**  y luego agrego lo particular de la clase.
+
+## REstringir la herencia y sobreescritura de métodos
+
+- Para impedir la herencia usamos la palabra **final**, la clase que tenga final no puede tener clases hijas(no tiene herencia). Lo mismo con los métodos, si un método en la clase padre tiene final no puede ser modificado en las clases hijas.
+
+---
