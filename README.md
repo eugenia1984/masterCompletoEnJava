@@ -45,4 +45,6 @@ Dentro de **src** esta la práctica
 
 - 17 - POO - Sobrecarga de metodos
 
+- 18 - POO - Herencia
+
 ---
