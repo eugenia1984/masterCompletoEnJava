@@ -1170,7 +1170,7 @@ public class Alumno extends Persona {
 
 - En el return primero invoco a: **super.toString()**  y luego agrego lo particular de la clase.
 
-## REstringir la herencia y sobreescritura de métodos
+## Restringir la herencia y sobreescritura de métodos
 
 - Para impedir la herencia usamos la palabra **final**, la clase que tenga final no puede tener clases hijas(no tiene herencia). Lo mismo con los métodos, si un método en la clase padre tiene final no puede ser modificado en las clases hijas.
 
