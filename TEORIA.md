@@ -1100,7 +1100,7 @@ No puede existir herencia si no existe alguna relación familiar entre ambas!
 
 ## Ejemplo de herencia
 
-````Java
+```Java
 class Persona{}
 classProfesor extends Persona {}
 class Director extends Persona{}
