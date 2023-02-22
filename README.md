@@ -47,4 +47,6 @@ Dentro de **src** esta la práctica
 
 - 18 - POO - Herencia
 
+- 19 - POO - Herencia y clases Abstractas
+
 ---
