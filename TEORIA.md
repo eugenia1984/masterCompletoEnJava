@@ -1175,3 +1175,40 @@ public class Alumno extends Persona {
 - Para impedir la herencia usamos la palabra **final**, la clase que tenga final no puede tener clases hijas(no tiene herencia). Lo mismo con los métodos, si un método en la clase padre tiene final no puede ser modificado en las clases hijas.
 
 ---
+
+⭐ SECCION 19 - POO - HERENCIA Y CLASES ABSTRACTAS
+
+## ¿Qué es una clase abstracta?
+
+
+Es una clase que representa un concepto gen{erico o conceptual y como tal, no debe ser ejemplarizada!
+
+Sus métodos también son abstractos, las clases hijas lo sobreescriben.
+
+## Concepto
+
+- Es cuando tenemos una jerarqu{ia de clases en que alg{un comportamiento est{a presente en todas ellas pero se materializa de formas distintas en cada una.
+
+- El modificador **abstract** declara que la clase es una clase abstracta.
+
+- Una clase abstracta podría contener **métodos abstractos** (métodos sin implementación).
+
+- Una clase abstracta está diseñada para ser una **superclase** y no puede ejemplarizarse (no la puedo instanciar con el new).
+
+
+### Ejemplo en código
+
+```Java
+abstract public class Persona {
+    protected Integer id;
+    protected String firstName;
+    protected String lastName;
+    
+    abstract public vopid register();
+    
+    abstract public void deleted();
+    
+}
+```
+
+---
