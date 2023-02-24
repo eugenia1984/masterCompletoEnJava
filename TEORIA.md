@@ -1212,3 +1212,31 @@ abstract public class Persona {
 ```
 
 ---
+
+
+# :star: SECCION 20 - POO - INTERFACE
+
+
+## ¿Qué es una interface?
+
+Una **interfaz** es una **colecci{on de m{etodos abstractos**(sin implementar) y de **valores constantes**(final) que puede realizar un objeto determinado.
+
+## Concepto
+
+- Una interface es como una clase abstracta pero NO PERMITE QUE NINGUNO DE SUS M{ETODOS EST{EN IMPLEMENTADOS.
+
+- Capturar similitudes entre clases no relacionadas sin forzar una relación entre ellas.
+
+- Es decir definen comportamientos que una o arias clases necesitan implementar.
+
+- Es un tipo de dato de referencia, puede utilizarse como tipo de dato del objeto (argumento de métodos y una declaración de variables).
+
+## Diseño orientado a las interfaces
+
+- En Java, las interfaces permiten pasar del estilo de diseño "orientado a implementaci{on" a uno "oreintado a la interfaz".
+
+- Donde todas las clases acceden a servicios a través de interfaces que son implementadas por clases concretas
+
+- Y al no depender de clases concretas (solo de entidades abstractas) nuestro diseño será más reutilizable.
+
+---
