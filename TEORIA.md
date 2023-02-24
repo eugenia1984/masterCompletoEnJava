@@ -1239,4 +1239,63 @@ Una **interfaz** es una **colecci{on de m{etodos abstractos**(sin implementar) y
 
 - Y al no depender de clases concretas (solo de entidades abstractas) nuestro diseño será más reutilizable.
 
+## Ejemplos de interfaces
+
+- Interface:
+```Java
+public interface Imprimible {
+    public void imprimir();
+}
+```
+
+- Clase que la implementa:
+```Java
+public class Curriculum implements Imprimible {
+    @Override
+    public void Imprimir() {
+        // Debe implementar el metodo de la interface
+    }
+}
+```
+
+## Herencia múltiple a nivel de interfaces
+
+Una misma clase puede implementar varias interfaces
+
+
+Las interfaces:
+```Java
+public interface IPuedeSaltar {
+    public void saltar();
+}
+
+public interface IPuedeCorrer {
+    public void correr();
+}
+
+public interface IPuedeNadar {
+    public void nadar();
+}
+```
+
+Son implementadas en una misma clase:
+```Java
+public class Perro implements IPuedeSaltar, IPuedeCorrer, IPuedeNadar {
+    @Override
+    public void saltar() {
+        // el perro puede saltar
+    }
+    
+    @Override
+    public void correr() {
+        // el perro puede correr
+    }
+    
+    @Overrride
+    public void nadar() {
+        // el perro puede nadar
+    }
+}
+```
+
 ---
