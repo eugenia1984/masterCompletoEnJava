@@ -51,4 +51,8 @@ Dentro de **src** esta la práctica
 
 - 20 - POO - Interface
 
+- 21 - POO - Generics
+
+- 22 - Manejo de excepciones
+
 ---
