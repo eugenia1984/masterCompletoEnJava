@@ -1531,5 +1531,9 @@ List            Set       |         |         |
    
 - **Object[] to Array()**    
     
+- **addFirst()**, **addLast()**, **getFirst()**, **getLast()**, **removeFirst()**, **removeLast()** que no est{an definidos en ningún interfaz o clase base y que permiten utilizar la Lista Enlazada como una Pila y una Cola.    
+    
+- **getFirst()**, **getLast()**, **removeFirst()**, **removeLast()** lanzan **NoSuchElementException** si la lista est{a vac{ia.    
+    
 ---
 ---
