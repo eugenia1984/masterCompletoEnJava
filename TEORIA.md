@@ -1507,6 +1507,29 @@ List            Set       |         |         |
     Vector
 ```
 
-
+## Métodos de Collection
+    
+- **boolean add(Object)** agregar un elemento a la colección. Devuelve **false** si no se pudo agregar.
+    
+- **boolean addAll( Collection)** agregar una colección que se pasa por argumento
+    
+- **void clear()** Elimina todos los elementos que componen la coleccion
+    
+- **boolean contains(Object)** **verdadero** si la colección contiene el objeto que se pasa como par{ametro, utiliza el m{etodo **equals()** para ubicar el objeto
+    
+- **boolean isEmpty()** **verdadero** si la colección est{a **vacía**, no contiene elementos
+    
+- **Iterator iterator()** devuelve un objeto Iterator que se puede utilizar para avanzar a través de los elementos
+    
+- **boolean remove(Object)** elimina un elemento de la colección y devuelve true si se ha conseguido.
+    
+- **boolean removeAll(Collection)** elimina todos los elementos que están contenidos en el argumento. Devuelve true si consigue eliminar cuañlquiera de ellos.
+    
+- **boolean retainAll(Collection)** mantiene solamente los elementos que est{an contenidos en el argumento, es lo que sería una intersección en la teoría de conjuntos. Devuelve verdadero en caso de que se produzca alg{un cambio.
+    
+- **int size()** devuelve el n{umero de elementos que componen la colección.
+   
+- **Object[] to Array()**    
+    
 ---
 ---
