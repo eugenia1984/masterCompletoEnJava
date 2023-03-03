@@ -1299,3 +1299,175 @@ public class Perro implements IPuedeSaltar, IPuedeCorrer, IPuedeNadar {
 ```
 
 ---
+
+# :star:  SECCION 23 - MANEJO DE EXCEPCIONES
+
+## ¿Qué son las excepciones ?
+
+Una excepción es un problema o evenyo que ocurre durante la ejecuci{on del programa que interrumpe el flujo normal.
+
+Conceptualmente es un EVENTO que ocurre DURANTE LA EJECUCION DEL PROGRAMA.
+
+## Caracteristicas
+
+- Separa el codigo que gestiona los errores del codigo principal del programa
+
+- Nos permite manejar el error y continuar con la ejecucion del programa
+
+- Agrupar y diferencias entre diferentes tipos de errores.
+
+- Propagar errores hacia arriba en la pila de llamadas(StackTrace)
+
+
+## Sintaxis
+
+try...catch...finally
+
+```Java
+try {
+// bloque que lanza la excepcion
+} catch(Exeption ex) {
+// aca manejamos el error
+} finally {
+// bloque opcional, siempre se ejecuta
+}
+```
+
+Una estructura que nos permite capturar excepciones, reaccionar a un error de ejecución, podemos imprimir mensajes de error "a la medida" y continuar con la ejecución del programa.
+
+## Capturar múltiples excepciones
+
+```Java
+try {
+    String valor = JOptionPane.showInputDialog(null, "Ingresa un entero: ");
+    
+    // Un valor no numerico lanzara un NumberFormatException
+    int divisor = Integer.parseInt(valor);
+    
+    // Si la division es 0, esto resultara un AritmeticException
+    System.out.println(10 / divisor);
+} catch(NumberFormatException nfe) {
+    // aca manejamos el error NumberFormatException 
+} catch(AritmethicException ae) {
+    // aca manejamos el error AritmethicException
+} finally {
+    // bloque opcional, siempre se ejecuta
+}
+```
+
+## La clase Exception
+
+- Cuando se lanza una excepcion, lo que se hace es lanzar una instancia de Exception o de una clase derivada.
+
+- Esta clase tiene dos constructores y dos métodos importantes:
+
+```Java
+Exception e = new Exception();
+```
+
+```Java
+String mensaje = "algún mensaje de error";
+Exception e = new Exception(mensaje);
+```
+
+```Java
+String mensaje = e.getMessage();
+e.printStackTRace();
+```
+
+## Existen dos tipos de Excepciones
+
+Chequeadas y No Cuequeadas
+
+```
+              Throwable
+                |       |
+            Error    Exception-------------CHECKED
+                          |     |------------------------------------------------------
+                          |                    |                     |                |
+UNCHECKED ------ RuntimeException             IOException        SQLException       InterrptedException
+                 |     |       |              |          |
+ArrayIndexOutBound  Aritmetic  NullPointer   MalformedURL FileNotFound
+Exception           Exception  Exception     Exception    Exception
+               
+
+
+## La clausula THROWS
+
+```Java
+public class PersonalizadaException extends Exception {
+    public PersonalizadaException(String mensaje) {
+        super(mensaje);
+    }
+}
+```
+
+```Java
+public class NoZeroIdException extends Exception {
+    public NoZeroIdException(String mensaje) {
+        super(mensaje);
+    }
+}
+```
+
+
+```Java
+public class ClienteRepositorio {
+    public Cliente porId(int id) throws Exception {
+        if(id ==0) {
+            // throw new Exception("id no puede ser cero");
+            throw new NoZeroIdException("id no puede ser cero");
+        }
+    }
+}
+```
+
+
+```Java
+public static void main(String[] args) throws Exception  {
+    ClienteRepositorio repo = new ClienteREpositorio();
+    Cliente cliente = repo.porId(2);
+}
+```
+
+- Los métodos deben capturar o propaar todas las excepciones chequeadas que puedan ser lanzadas dentro de su ambito.
+
+- Estos es con la clausula throws que lista una o varias excepciones que son lanzadas e el método.
+
+## Sobreescritura y Excepciones
+
+```Java
+public class ClienteRepositorio implements CrudRepositorio{
+
+    public Cliente porId(int d) throws PersonalizadaException {
+        if(id==0) {
+            throws NoZeroIdException("id no puede ser cero");
+        }
+    }
+    
+}
+```
+
+
+```Java
+public interface CrudRepositorio {
+    Cliente porId(int d) throws PersonalizadaException;
+}
+```
+
+
+```Java
+public interface ClienteRepositorio implements CrudRepositorio{
+
+    public Cliente porId(int d) throws NoZeroIeException {
+        if(id==0) {
+            throws NoZeroIdException("id no puede ser cero");
+        }
+    }
+    
+}
+```
+
+
+```
+---
