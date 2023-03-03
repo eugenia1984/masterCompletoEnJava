@@ -55,4 +55,6 @@ Dentro de **src** esta la práctica
 
 - 22 - Manejo de excepciones
 
+- 23 - API de colección de Java
+
 ---
