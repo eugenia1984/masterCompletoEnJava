@@ -1469,12 +1469,13 @@ public interface ClienteRepositorio implements CrudRepositorio{
 ```
 
 
-```
 ---
 
 # :star: SECCION 23 - API COLLECTION JAVA (COLECCIONES)
 
+
 ## ¿Qué son las colecciones?
+
 
 Las colecciones son para lamacenar objetos, agrupar y tiene 2 grandes tipos:
 
@@ -1482,15 +1483,21 @@ Las colecciones son para lamacenar objetos, agrupar y tiene 2 grandes tipos:
 
 - Map
 
+
 ## Tipo de agrupaciones
+
 
 - Los Collection es un API para agrupación de objetos, consta de tres tipos: **List**, **Set** y **Map**
 
-- Una LIST almacenr{a objetos en una secuencia determinada
 
-- Un SET no permitir{a elementos duplicados y no mantiene el orden de sus elementos.
+- Una LIST almacenrá objetos en una secuencia determinada
+
+
+- Un SET no permitirá elementos duplicados y no mantiene el orden de sus elementos.
+
 
 - Los MAP (mapas) almacenan infomración en base a parejas de llaves valores (como los diccionarios de otros lenguajes)
+
 
 ```
         <interface>                  <interface>
@@ -1506,6 +1513,7 @@ List            Set       |         |         |
 |-<synchronized>
     Vector
 ```
+
 
 ## Métodos de Collection
     
