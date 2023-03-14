@@ -1477,7 +1477,7 @@ public interface ClienteRepositorio implements CrudRepositorio{
 ## ¿Qué son las colecciones?
 
 
-Las colecciones son para lamacenar objetos, agrupar y tiene 2 grandes tipos:
+Las colecciones son para almacenar objetos, agrupar y tiene 2 grandes tipos:
 
 - Collection: List - Set
 
