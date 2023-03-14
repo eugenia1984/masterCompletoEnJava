@@ -1490,13 +1490,13 @@ Las colecciones son para lamacenar objetos, agrupar y tiene 2 grandes tipos:
 - Los Collection es un API para agrupación de objetos, consta de tres tipos: **List**, **Set** y **Map**
 
 
-- Una LIST almacenrá objetos en una secuencia determinada
+- Una **LIST** almacenrá objetos en una secuencia determinada
 
 
-- Un SET no permitirá elementos duplicados y no mantiene el orden de sus elementos.
+- Un **SET** no permitirá elementos duplicados y no mantiene el orden de sus elementos.
 
 
-- Los MAP (mapas) almacenan infomración en base a parejas de llaves valores (como los diccionarios de otros lenguajes)
+- Los **MAP** (mapas) almacenan información en base a parejas de llaves valores (como los diccionarios de otros lenguajes)
 
 
 ```
@@ -1523,9 +1523,9 @@ List            Set       |         |         |
     
 - **void clear()** Elimina todos los elementos que componen la coleccion
     
-- **boolean contains(Object)** **verdadero** si la colección contiene el objeto que se pasa como par{ametro, utiliza el m{etodo **equals()** para ubicar el objeto
+- **boolean contains(Object)** **verdadero** si la colección contiene el objeto que se pasa como paáametro, utiliza el método **equals()** para ubicar el objeto
     
-- **boolean isEmpty()** **verdadero** si la colección est{a **vacía**, no contiene elementos
+- **boolean isEmpty()** **verdadero** si la colección está **vacía**, no contiene elementos
     
 - **Iterator iterator()** devuelve un objeto Iterator que se puede utilizar para avanzar a través de los elementos
     
@@ -1539,9 +1539,9 @@ List            Set       |         |         |
    
 - **Object[] to Array()**    
     
-- **addFirst()**, **addLast()**, **getFirst()**, **getLast()**, **removeFirst()**, **removeLast()** que no est{an definidos en ningún interfaz o clase base y que permiten utilizar la Lista Enlazada como una Pila y una Cola.    
+- **addFirst()**, **addLast()**, **getFirst()**, **getLast()**, **removeFirst()**, **removeLast()** que no están definidos en ningún interfaz o clase base y que permiten utilizar la Lista Enlazada como una Pila y una Cola.    
     
-- **getFirst()**, **getLast()**, **removeFirst()**, **removeLast()** lanzan **NoSuchElementException** si la lista est{a vac{ia.    
+- **getFirst()**, **getLast()**, **removeFirst()**, **removeLast()** lanzan **NoSuchElementException** si la lista está vacía.    
     
 ---
 ---
