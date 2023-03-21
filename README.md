@@ -57,4 +57,6 @@ Dentro de **src** esta la práctica
 
 - 23 - API de colección de Java
 
+- 24 - Hilos y Concurrencia
+
 ---
