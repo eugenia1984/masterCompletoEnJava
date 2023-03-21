@@ -1176,7 +1176,7 @@ public class Alumno extends Persona {
 
 ---
 
-⭐ SECCION 19 - POO - HERENCIA Y CLASES ABSTRACTAS
+# ⭐ SECCION 19 - POO - HERENCIA Y CLASES ABSTRACTAS
 
 ## ¿Qué es una clase abstracta?
 
@@ -1468,6 +1468,12 @@ public interface ClienteRepositorio implements CrudRepositorio{
 }
 ```
 
+## Try() With Resources close del FileReader
+
+[https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html](https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html)
+
+[https://www.baeldung.com/java-try-with-resources](https://www.baeldung.com/java-try-with-resources)
+
 
 ---
 
@@ -1543,5 +1549,37 @@ List            Set       |         |         |
     
 - **getFirst()**, **getLast()**, **removeFirst()**, **removeLast()** lanzan **NoSuchElementException** si la lista está vacía.    
     
+---
+---
+
+# :star: SECCION 24 - HILOS Y CONCURRENCIA
+
+## HILOS
+
+
+#### ¿QUE SON ?
+
+- Objetos que dan la capacidad de hacer más de una tarea al mismo tiempo
+
+- CPU Multi-Core -> se trabaja en paralelo -> permite trabajar en forma REACTIVA y ASINCRONA
+
+- CPU un solo Core -> de forma concurrente(1 tarea primero, despues otra y va alternando)
+
+
+#### CARACTERISTICAS:
+
+- JVM es un sistema multi-thread, capaz de ejecutar varias tareas (o subprogramas simultaneamente)
+
+- Java soporta Thread con algunas clases e interfaces y con métodos específico en la clase Object
+
+- JVM gestiona todos los detalles, asignación de tiempos de ejecución, prioridades, de forma similar a como gestiona un S.O.(Sist. Oper.)
+
+
+#### ¿COMO CREARLOS?
+
+- extender de la clase Thread de Java
+
+- utilizar el método .start() en una nueva instancia de CalculoThread()
+
 ---
 ---
