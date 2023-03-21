@@ -1581,5 +1581,103 @@ List            Set       |         |         |
 
 - utilizar el método .start() en una nueva instancia de CalculoThread()
 
+
+### Ciclo de vida de un Thread: NEW
+
+- Un hilo NEW es uno que se ha creado pare que aun no se ha iniciado con el m{etodo start()
+
+```Java
+Runnable runnable = new Tarea();
+Thread t = new(runnable);
+System.out.println(t.getState()); // new
+```
+
+### Ciclo de vida de un Thread: RUNNABLE
+
+- Un hilo runnable es uno que se ha creado e iniciado con el start():
+
+```Java
+Runnable runnable = new Tarea();
+Thread t = new Thread(runnable);
+System.out.println(t.getState()); // runnable
+```
+
+## Ciclo de vida de un Thread: BLOCKED
+
+- Un hilo está bloqueado cuando actualmente no es elegible para ejecutrse.
+
+- Entra en este estado cuando está esperando un bloqueo del monitor e intenta acceder a una secci{on de c{odigo que est{a bloqueada por alg{un otro hilo en un método sincronizado.
+
+```Java
+public static vois main(String[] args) throws InterruptedException {
+    Rubbable runnable = () -> recurso();
+    
+    Thread t1 = new Thread(runnable);
+    Thread t2 = new Thread(runnable);
+    t1.start();
+    t2.start();
+    Thread.sleep(1000);
+    System.out.println(t2.getState()); // blocked
+}
+
+public static synchronized void recurso() {
+    // realizando algun proceso compartido entre hilos
+    while(true){}
+}
+```
+
+## Ciclo de vida de un Thread: WAITING
+
+- Un hilo está en estado WAITING cuando est{a esperando que otro hilo realice una acción en particular.
+
+- Un hilo puede entrar en este estado llamando a cualquiera de los dos métodos wait() y join()
+
+```Java
+public static main(tring[] args) {
+    Thread t1 = Thread.currentThread(); // hilo principal
+    Thread t2 = new Thread(() -> { // segundo hilo que hace una pausa
+        // realizando algunas tareas costosas
+        try {
+            Thread.sleep(5000);
+        } catch(InterruptedException e) {...}
+        
+        System.out.println(t1.getState()); // waiting -> el hilo principal debe esperarlo, se traba
+    });
+    
+    t2.start();
+    t2.join():
+}
+```
+
+## Ciclo de vida de un Thread: TERMINATED
+
+- Este es el estado de un hilo muerto. Est{a en el estado TERMINATED cuando ha finalizado la ejecuci{on o se termin{o de forma anormal.
+
+- Tambi{en podemos usar el método isAlive() para determinar si el hilo está vivo o no.
+
+```Java
+public static vvoid main(String[] args) throws InterruptedException {
+    Thread t1 = new Thread(() -> {
+        // realizando algunas tareas rapidas
+    })
+    
+    t1.start();
+    Thread.sleep(1000);
+    
+    System.out.println(t1.getState()); // TERMINATED
+    System.out.println(t1.isAlive()); // false
+}
+```
+
+-> Tambien se puede hacer con el metodo stop(), pero no se reomienda, ya que lo termina de forma abrupta y podr{ia quedar inconclusa la ejecuci{on.
+
+## Métodos wait(), notify(), notifyAll()
+
+- La clase Object tiene 3 métodos que permiten que los hilos se sincronicen y comuniquen sobre el estado bloqueado de un recurso.
+
+- **wait()** libera el bloqueo para que otros hilos tengan la oportunidad de acceder a un recurso compartido (método sincronizado) y queda esperando indefinidamente hasta que otro hilo invoca **notify()** o **notifyAll()**.
+
+- **notify()++ y **notifyAll** se usa para despertar los hilos que están esperando un acceso a un recurso compartido (monitor).
+
 ---
 ---
