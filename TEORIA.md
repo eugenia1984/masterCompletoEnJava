@@ -1679,5 +1679,25 @@ public static vvoid main(String[] args) throws InterruptedException {
 
 - **notify()++ y **notifyAll** se usa para despertar los hilos que están esperando un acceso a un recurso compartido (monitor).
 
+## Método sleep()
+
+- **Thread.sleep()** envía el hilo actual al estado **TIME_WAITING** durante algún tiempo.
+
+- Permanece dormido hasta que el tiempo expire o se llame al método **interrupt()**
+
+```Java
+public static void main(String[] args) throws InterruptedException {
+    Thread t1 = new Thread(() -> {
+        // realizando alguna tarea costosa
+        try {
+            Thread.sleep(5000);
+        } catch(InterruptedException e) {...} });
+        
+        t1.start();
+        Thread.sleep(1000);
+        System.out.println(t1.getState()); // TIMED_WAITING
+}
+```
+
 ---
 ---
