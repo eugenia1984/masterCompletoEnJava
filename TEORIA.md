@@ -1873,3 +1873,37 @@ Predicate<Integer> test = num -> num > 10;
 
 ---
 ---
+
+# :star: API STREAM
+
+
+## ¿Que son los stream?
+
+Combina las mejores ideas del **Iterator¨¨ y la **programación funcional** para **implementar flujos de datos.
+
+Una secuencia de elementos, que provienen de una fuente de datos(List, Set, interfaz Collection o un Array). A cada elemento se le realiza una operación.
+
+Es como una tubería de agua
+
+El orden de los elementos se mantiene
+
+No sirve para guardar datos, sino para tratarlos, es como un canal de entrada y salida.
+
+## Características
+
+- Crea flujos continuos que contiene operadores para procesar secuencias de elementos.
+
+- Los operadores reducen las tareas de transforamciones
+
+- Transforma y compone flujos con lso operadores: map, filter, concat, distinct, flatmap, sorted, foreach, reduce, etc
+
+- Pueden ser creados desde listas, arreglos, rangos
+
+- Son inmutables
+
+- Concurrencia hecho fácil
+
+
+
+---
+---
