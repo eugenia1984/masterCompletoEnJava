@@ -59,4 +59,8 @@ Dentro de **src** esta la práctica
 
 - 24 - Hilos y Concurrencia
 
+- 25 - Expresiones Lambda
+
+- 26 - API Stream
+
 ---
