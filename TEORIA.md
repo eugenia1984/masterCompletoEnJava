@@ -1701,3 +1701,175 @@ public static void main(String[] args) throws InterruptedException {
 
 ---
 ---
+
+# :star: TRY WITH RESOURCES
+
+- Support for try-with-resources — introduced in Java 7 — allows us to declare resources  to be used in a try block with the assurance that the resources will be closed after the execution of that block. The resources declared need to implement the AutoCloseable interface.
+
+### Using try-with-resources:
+
+Simply put, to be auto-closed, a resource has to be both declared and initialized inside the try:
+
+```Java
+public class Ejemplo1 {
+    public static void main(String[] args) throws FileNotFoundException {
+        try (PrintWriter writer = new PrintWriter(new File("test.txt"))) {
+            writer.println("*** Ejemplo 1 ***\n Hello World");
+        }
+    }
+}
+```
+
+### Replacing try–catch-finally With try-with-resources:
+
+ The simple and obvious way to use the new try-with-resources functionality is to replace the traditional and verbose try-catch-finally block.
+
+```Java
+public class Ejemplo2 {
+    public static void main(String[] args) {
+       // typical try-catch-finally block
+        /**
+         * Scanner scanner = null;
+         * try {
+         *     scanner = new Scanner(new File("test.txt"));
+         *     while (scanner.hasNext()) {
+         *         System.out.println(scanner.nextLine());
+         *     }
+         * } catch (FileNotFoundException e) {
+         *     e.printStackTrace();
+         * } finally {
+         *     if (scanner != null) {
+         *         scanner.close();
+         *
+         */
+
+        // the new super succinct solution using try-with-resources
+        // Leo el archivo que cree en el Ejemplo1 y lo muestro por consola
+        try (Scanner scanner = new Scanner(new File("test.txt"))) {
+            while (scanner.hasNext()) {
+                System.out.println(scanner.nextLine());
+            }
+        } catch (FileNotFoundException fnfe) {
+            fnfe.printStackTrace();
+        }
+
+    }
+}
+```
+
+### Try-with-resources With Multiple Resources:
+
+We can declare multiple resources just fine in a try-with-resources block by separating them with a semicolon
+
+```Java
+public class Ejemplo3 {
+    public static void main(String[] args) throws FileNotFoundException {
+        try (Scanner scanner = new Scanner(new File("test.txt"));
+             PrintWriter writer = new PrintWriter(new File("testWrite.txt"))) {
+            while (scanner.hasNext()) {
+                writer.print(scanner.nextLine());
+            }
+        }
+    }
+}
+```
+
+### A Custom Resource With AutoCloseable :
+
+To construct a custom resource that will be correctly handled by a try-with-resources block, the class should implement the Closeable or AutoCloseable interfaces and override the close method
+
+```Java
+public class Ejemplo4 {
+    public static void main(String[] args) throws Exception {
+        MyResource myResource = new MyResource();
+        myResource.close();
+    }
+}
+```
+
+### Resource Closing Order :
+
+Resources that were defined/acquired first will be closed last. Let's look at an example of this behavior
+
+```Java
+public class Ejemplo5 {
+    public static void main(String[] args) throws Exception {
+        orderOfClosingResources();
+    }
+
+    private static void orderOfClosingResources() throws Exception {
+        try (AutoCloseableResourcesFirst af = new AutoCloseableResourcesFirst();
+             AutoCloseableResourcesSecond as = new AutoCloseableResourcesSecond()) {
+            af.doSomething();
+            as.doSomething();
+        }
+    }
+}
+```
+
+---
+---
+
+# :star: SECCION 25 - EXPRESIONES LAMBDA
+
+## Supplier 
+
+- Devuelve un valor
+
+Ejemplo:
+```Java
+// Modo más extenso
+        Supplier<String> proveedor1 = () -> {
+            return "Hola mundo lambda supplier - versión extensa -";
+        };
+        System.out.println(proveedor1.get());
+
+        // Modo simplificado:
+        Supplier<String> proveedor2 = () -> "Hola mundo lambda supplier - versión simplificada -";
+        System.out.println(proveedor2.get());
+```
+
+## Consumer:
+
+- Es una expresión lambda que permite pasar por argumento un solo parámetro(del tipo del genérico)
+
+- Se le puede implementar alguna función a lo que se pasa por parámetro
+
+- Es un método VOID, sin return.
+
+---> es un CONSUMIDOR del PARÁMETRO del MÉTODO
+
+---->  una EXPRESIÓN LAMBDA se traduce a una INTERFAZ FUNCIONAL
+
+## Biconsumer: 
+
+- Tiene 2 argumentos
+
+
+## Predicate 
+
+- Siempre devuelve BOOLEAN 
+
+Ejemplo:
+```Java
+Predicate<Integer> test = num -> num > 10;
+        boolean resultado = test.test(7);
+        System.out.println("resultado de 7 > 10 => " + resultado);
+```
+
+## BiPredicate 
+
+- Expresiones boleanas en expresiones lambda. Similar al Predicate, pero recibe 2 parámetros
+
+## Function
+
+- Combinación entre el Consumer (que recibe un argumento) y el Supplier (que retorna/devuelve algún resultado)
+
+## BiFunction
+
+- Recibe dos argumentos y tiene return
+
+
+
+---
+---
